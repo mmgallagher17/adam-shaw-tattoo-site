@@ -2,6 +2,7 @@
 
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { ReactNode } from 'react';
+import type { Ref } from 'react';
 
 interface RevealSectionProps {
   children: ReactNode;
@@ -20,7 +21,7 @@ export default function RevealSection({
 
   return (
     <Tag
-      ref={ref}
+      ref={ref as Ref<HTMLElement>}
       className={`reveal ${className}`}
       style={delay ? { transitionDelay: `${delay}ms` } : undefined}
     >
