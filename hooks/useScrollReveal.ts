@@ -15,7 +15,7 @@ import { useEffect, useRef } from 'react';
 export function useScrollReveal<T extends HTMLElement = HTMLElement>(
   options?: IntersectionObserverInit
 ) {
-  const ref = useRef<T>(null);
+  const ref = useRef<T | null>(null);
 
   useEffect(() => {
     const el = ref.current;
