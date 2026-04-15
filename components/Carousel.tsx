@@ -112,7 +112,9 @@ export default function Carousel({
             {children.map((child, index) => (
               <div
                 key={index}
-                className={`min-w-0 px-2 md:px-4 ${
+                className={`min-w-0 ${
+                  controlsPosition === 'sides' ? 'px-14 md:px-16' : 'px-2 md:px-4'
+                } ${
                   desktopSlidesPerView === 2
                     ? 'flex-[0_0_100%] md:flex-[0_0_50%]'
                     : 'flex-[0_0_100%]'

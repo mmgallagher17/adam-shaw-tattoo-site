@@ -22,7 +22,7 @@ export default function HeroVideo({
   secondaryButtonLink,
 }: HeroVideoProps) {
   const hasVideo = Boolean(videoUrl);
-  const mobileVideo = '/media/hero-loop-small.mp4';
+  const mobileVideo = '/media/hero-mobile.mp4';
 
   const scrollToContactSmooth = () => {
     const target = document.getElementById('contact');
@@ -61,7 +61,7 @@ export default function HeroVideo({
           className="absolute inset-0 h-full w-full object-cover"
           aria-hidden="true"
         >
-          <source src="/media/hero-loop-small.mp4" type="video/mp4" media="(max-width: 767px)" />
+          <source src="/media/hero-mobile.mp4" type="video/mp4" media="(max-width: 767px)" />
           <source src={videoUrl} type="video/mp4" media="(min-width: 768px)" />
         </video>
       )}

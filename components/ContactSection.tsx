@@ -85,7 +85,7 @@ export default function ContactSection({
             className="whitespace-nowrap uppercase leading-none"
             style={{
               fontFamily: "'Holtwood One SC', serif",
-              fontSize: 'clamp(4.5rem, 15.3vw, 13.75rem)',
+              fontSize: 'clamp(2rem, 15.3vw, 13.75rem)',
               letterSpacing: '-0.01em',
               textShadow: '0 4px 4px rgba(0,0,0,0.25)',
               color: headingColor,

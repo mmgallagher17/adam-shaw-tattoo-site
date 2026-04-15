@@ -6,7 +6,7 @@ import ContactSection from '@/components/ContactSection';
 import Image from 'next/image';
 
 export default function Home() {
-  const heroVideoUrl = '/media/hero-loop.mp4';
+  const heroVideoUrl = '/media/hero-desktop.mp4';
 
   // TODO: Replace with actual portfolio images
   const portfolioItems = [
