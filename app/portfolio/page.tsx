@@ -42,7 +42,7 @@ export default function PortfolioPage() {
                 textShadow: '0 4px 24px rgba(0,0,0,0.4)',
               }}
             >
-              See the Work. Feel the Craft.
+              Tattoos that last as long as you do.
             </h1>
             <p
               className="max-w-[560px] text-[#f6eee0]/80"

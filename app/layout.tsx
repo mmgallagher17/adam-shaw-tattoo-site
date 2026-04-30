@@ -10,8 +10,16 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://adamshawtattoo.com'),
   title: "Adam Shaw Tattoo",
-  description: "Professional tattoo artist specializing in traditional and custom designs",
+  description: "Traditional and Japanese tattoo artist based in Winnipeg, MB. Custom work, flash, and walk-ins at Kapala Tattoo.",
+  openGraph: {
+    title: "Adam Shaw Tattoo",
+    description: "Traditional and Japanese tattoo artist based in Winnipeg, MB. Custom work, flash, and walk-ins at Kapala Tattoo.",
+  },
+  twitter: {
+    card: 'summary_large_image',
+  },
 };
 
 export default function RootLayout({

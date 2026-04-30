@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import RevealSection from '@/components/RevealSection';
 import ContactSection from '@/components/ContactSection';
 import { scrollToContact } from '@/lib/scrollToContact';
@@ -23,26 +24,20 @@ interface Stop {
   description: string;
   /** Optional link to the event / studio website */
   url?: string;
+  /** Optional event poster / photo */
+  imageUrl?: string;
 }
 
 const upcomingStops: Stop[] = [
   {
     id: '1',
-    type: 'Guest Spot',
-    venueName: "Vandy's Tattoo",
-    city: 'Vancouver, BC',
-    startDate: '2025-09-03',
-    description: "Come see Adam at Vandy's — September 3 to 6, 2025.",
-    url: 'https://vandystattoovancouver.com',
-  },
-  {
-    id: '2',
     type: 'Convention',
-    venueName: 'Regina Tattoo Convention',
-    city: 'Regina, SK',
-    startDate: '2026-02-07',
-    description: 'Adam at the Regina Tattoo Convention from February 7 to 11, 2026.',
-    url: 'https://reginatattoo.ca',
+    venueName: 'Winnipeg Tattoo Convention',
+    city: 'Winnipeg, MB',
+    startDate: '2026-08-07',
+    description: 'Adam will be at the Winnipeg Tattoo Convention — August 7, 8 & 9, 2026 at Red River Exhibition Park.',
+    url: 'https://winnipegtattooconvention.com',
+    imageUrl: '/events/winnipeg-tattoo-convention-2026.png',
   },
 ];
 
@@ -125,9 +120,17 @@ function StopCard({ stop }: { stop: Stop }) {
   return (
     <div className="flex flex-col overflow-hidden rounded-[8px] border-2 border-[#1f1f1f] bg-white">
       {/* Image area */}
-      <div className="relative flex aspect-[3/2] w-full items-center justify-center bg-[#c9bdb0]">
-        {/* TODO: replace with <Image> when Adam provides photos */}
-        <CameraIcon />
+      <div className="relative flex aspect-[2/3] w-full items-center justify-center bg-[#c9bdb0]">
+        {stop.imageUrl ? (
+          <Image
+            src={stop.imageUrl}
+            alt={stop.venueName}
+            fill
+            className="object-cover object-top"
+          />
+        ) : (
+          <CameraIcon />
+        )}
         {/* Date badge */}
         <div className="absolute right-4 top-4 flex w-[88px] flex-col items-center overflow-hidden rounded-[8px] bg-white px-1 py-3 text-center text-[#1f1f1f]">
           <span className="text-xs leading-none">{date.dayOfWeek}</span>

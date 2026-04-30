@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import RevealSection from '@/components/RevealSection';
 import ContactSection from '@/components/ContactSection';
@@ -67,9 +68,14 @@ export default function FlashPage() {
       <RevealSection>
         <section className="flex flex-col bg-[#f6eee0]">
           {/* Full-width image — takes up most of the section height */}
-          {/* TODO: replace with actual hero image */}
-          <div className="flex min-h-[55vh] w-full items-center justify-center bg-[#c9bdb0]">
-            <CameraIcon />
+          <div className="relative min-h-[55vh] w-full overflow-hidden">
+            <Image
+              src="/flash/flash-sheet-angel-nurse.jpg"
+              alt="Traditional flash sheet featuring an angel, nurse, and rose by Adam Shaw"
+              fill
+              className="object-cover [object-position:48%_8%] scale-[1.35] md:[object-position:center] md:scale-[1.5]"
+              priority
+            />
           </div>
 
           {/* Content row beneath the image */}
@@ -130,9 +136,13 @@ export default function FlashPage() {
           </div>
 
           {/* Image — right, full-bleed edge to edge */}
-          {/* TODO: replace with actual Traditional flash image */}
-          <div className="flex flex-1 items-center justify-center bg-[#c9bdb0] min-h-[400px]">
-            <CameraIcon />
+          <div className="relative flex-1 min-h-[400px] overflow-hidden">
+            <Image
+              src="/flash/flash-sheet-eagle-large.jpg"
+              alt="Traditional flash sheet featuring a bold diving eagle by Adam Shaw"
+              fill
+              className="object-cover scale-[1.3]"
+            />
           </div>
         </section>
       </RevealSection>
